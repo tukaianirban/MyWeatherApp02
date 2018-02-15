@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.myhome.weatherapp.myweatherapp.activities.WeatherActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerCityWeather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <android.support.v4.view.PagerTabStrip
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:foregroundGravity="top" />
+
+    </android.support.v4.view.ViewPager>
+
+    <!-- Message box to display when there are no cities selected by the user to view -->
+    <TextView
+        android:id="@+id/tvMessageWhenNoCities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="No cities added.\n Add a new city from 'My Cities'"
+        android:visibility="gone"
+        />
+</FrameLayout>

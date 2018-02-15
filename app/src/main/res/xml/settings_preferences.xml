@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="@string/pref_units_title"
+        android:entries="@array/units_labels_array"
+        android:entryValues="@array/units_values_array"
+        android:key="@string/pref_units_key"
+        android:defaultValue="@string/pref_units_value_metric" />
+
+    <CheckBoxPreference
+        android:title="Refresh weather data only when on Wifi"
+        android:key="@string/pref_metered_net_check_key"
+        android:enabled="true"
+        android:defaultValue="false"
+        android:summaryOn="On"
+        android:summaryOff="Off" />
+
+    <EditTextPreference
+        android:title="@string/pref_refresh_interval_title"
+        android:key="@string/pref_refresh_interval_key"
+        android:enabled="true" />
+
+</PreferenceScreen>

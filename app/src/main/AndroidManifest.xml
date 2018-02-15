@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myhome.weatherapp.myweatherapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- dont use launchMode="singleTop" to force all views to refresh their data on load -->
+        <activity android:name=".activities.WeatherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.WeatherContentProvider"
+            android:authorities="com.myhome.weatherapp.myweatherapp"
+            android:exported="false" />
+
+        <service android:name=".utilcomponents.ServiceRefreshWeatherData" />
+        <service android:name=".utilcomponents.PeriodicJobService" />
+
+        <activity
+            android:name=".activities.AddCityActivity"
+            android:label="@string/app_add_city_label"
+            android:parentActivityName=".activities.WeatherActivity"></activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/label_settings"
+            android:parentActivityName=".activities.WeatherActivity"></activity>
+
+        <receiver android:name=".WeatherDisplayWidget">
+            <intent-filter>
+                <action android:name="android.myweatherappwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_display_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

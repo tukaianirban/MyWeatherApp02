@@ -1,0 +1,56 @@
+table : citylist				// contains info of (only) the cities selected by the user for weather display
+
+id						INT
+city-name				TEXT
+geo-lat					REAL
+geo-lon					REAL
+country-code			TEXT
+
+Note : column <table-name> corresponds to the name of a table which contains weather info for the corresponding city
+
+
+
+table : weathertable					// contains weather info about aachen
+
+field/column 			json resp field					alt. json resp field	sqlite datatype 	description
+==============			===============					====================	===============		===========
+city_id					city.id													INT
+timestamp				[list].dt												REAL			(UTC epoch seconds)
+temp					[list].main.temp										REAL		(mean temp. at that instant)
+temp_min				[list].main.temp_min									REAL
+temp_max				[list].main.temp_max									REAL
+grnd_level				[list].main.grnd_level			[list].main.pressure	REAL	(pressure in hPa at ground level)
+humidity				[list].main.humidity									REAL		(humidity in %age)
+weather_id				[list].[weather].id										INT
+weather_group			[list].[weather].main									TEXT
+weather_desc			[list].[weather].description							TEXT
+weather_icon			[list].[weather].icon									TEXT		(used to generate weather icon)
+clouds					[list].clouds.all										REAL		(cloudiness %age)					optional
+wind_speed				[list].wind.speed										REAL		(optional: metre/sec)
+wind_degree				[list].wind.deg											REAL		(optional)
+rain					[list].rain.3h											REAL		(volume in mm. in last 3hrs)		optional
+snow					[list].snow.3h											REAL		(snow volume in last 3hrs)			optional
+
+
+
+
+============================== 
+preferences :
+location-name = {city-name},{country-code(ISO 3166)}
+city-id = <id from openweathermap>
+units = [{default} / {imperial} / {metric}]
+
+
+API KEY to use : (appid) 964d0e778fe8dd987975f2f9de7b3f70
+
+current weather:
+by city-name and celsius : http://api.openweathermap.org/data/2.5/weather?q=aachen,de&appid=964d0e778fe8dd987975f2f9de7b3f70&units=metric
+
+
+forecasts :
+
+by city-name and celsius : http://api.openweathermap.org/data/2.5/forecast?q=aachen,de&appid=964d0e778fe8dd987975f2f9de7b3f70&units=metric
+
+by city-id and celsius : 
+
+API call examples :

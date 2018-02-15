@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/label_settings"
+        android:id="@+id/menuSettings"
+        app:showAsAction="never"
+        android:orderInCategory="1" />
+
+    <item android:title="@string/label_refresh"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:id="@+id/menuRefresh"
+        app:showAsAction="always"
+        android:orderInCategory="2" />
+
+    <item android:title="@string/label_show_cities"
+        android:id="@+id/menuShowCities"
+        app:showAsAction="never"
+        android:orderInCategory="3" />
+
+</menu>

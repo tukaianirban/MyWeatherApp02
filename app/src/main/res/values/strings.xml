@@ -1,0 +1,83 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MyWeatherApp</string>
+    <string name="app_add_city_label">Select new city</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- preferences strings -->
+    <string name="pref_units_value_metric">metric</string>
+    <string name="pref_units_value_imperial">imperial</string>
+    <string-array name="units_values_array">
+        <item>@string/pref_units_value_metric</item>
+        <item>@string/pref_units_value_imperial</item>
+    </string-array>
+    <string-array name="units_labels_array">
+        <item>Metric (C)</item>
+        <item>Imperial (F)</item>
+    </string-array>
+
+    <string name="pref_metered_net_check_key">pref_metered_net_check</string>
+    <string name="pref_metered_net_title">pref_metered_net_title</string>
+
+    <string name="pref_refresh_interval_key">pref_refresh_interval_key</string>
+    <string name="pref_refresh_interval_title">pref_refresh_interval_title</string>
+    <!-- string array with the intervals in which the refresh from server can be done -->
+    <string-array name="refresh_interval_values_array">
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>120</item>
+        <item>360</item>
+        <item>1440</item>
+    </string-array>
+    <string-array name="refresh_interval_labels_array">
+        <item>30 min.</item>
+        <item>45 min.</item>
+        <item>2 hrs.</item>
+        <item>6 hrs.</item>
+        <item>1 day</item>
+    </string-array>
+
+    <string name="pref_units_title">Units</string>
+    <string name="pref_units_key">pref_units</string>
+
+    <string name="pref_last_weather_refresh_timestamp">weather_refresh_timestamp</string>
+
+    <!-- Display strings -->
+    <string name="label_settings">Settings</string>
+    <string name="label_refresh">Refresh</string>
+    <string name="label_show_cities">My cities</string>
+
+    <!-- Unit display labels -->
+    <string name="units_msec">m/sec</string>
+    <string name="units_kmph">km/hr</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <!-- xliff formatter strings -->
+    <!-- format for displaying temperature values in celsius and fahrenheit -->
+    <string name="format_display_temperature_metric">
+        <xliff:g id="temperature_value">%1$.1f</xliff:g>\u00B0C
+    </string>
+    <string name="format_display_temperature_imperial">
+        <xliff:g id="temperature_value">%1$.1f</xliff:g>\u00B0F
+    </string>
+
+    <!-- format for displaying rain , snow , wind values -->
+    <string name="format_display_rain">
+        <xliff:g id="rain_snow_wind">%1$.0f</xliff:g>%
+    </string>
+    <string name="format_display_snow">
+        <xliff:g id="rain_snow_wind">%1$.0f</xliff:g>%
+    </string>
+    <string name="format_display_wind">
+        <xliff:g id="rain_snow_wind">%1$.0f</xliff:g>%
+    </string>
+    <!-- format for displaying humidity -->
+    <string name="format_display_humidity">
+        <xliff:g id="display_humidity">%1$.0f</xliff:g>%
+    </string>
+
+
+</resources>
