@@ -1,4 +1,4 @@
-# MyWeatherApp02
+# MyWeatherApp
 
 MyWeatherApp is an Android app to fetch and display weather information from OpenWeatherApi. This version of the app assumes use of a "free" key from OpenWeatherApi which provides only:
 1. weather : current weather information of a location
